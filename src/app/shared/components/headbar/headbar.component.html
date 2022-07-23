@@ -1,0 +1,13 @@
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-left uk-container w-100">
+    <a href="#" class="uk-icon-link" uk-icon="menu" uk-toggle="target: #offcanvas-overlay"></a>
+    <a href="#" class="uk-navbar-item uk-logo">UIkit</a>
+    <ul class="uk-navbar-nav">
+      <ng-container *ngFor="let item of routerLinks;let i = index">
+        <li [routerLinkActive]="item.activeClass">
+          <a [routerLink]="item.link">{{ item.label }}</a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
